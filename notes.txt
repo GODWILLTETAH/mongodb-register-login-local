@@ -1,0 +1,86 @@
+NOTES
+======
+mongodb+srv://GODWILL-TETAH:<password>@testcluster-3sasu.mongodb.net/test?retryWrites=true&w=majority
+---------
+node js with passport full project with ejs.
+----------------------------
+- register on mongo db atlas
+* create cluster
+*select a free plan
+*rename cluster and create cluster
+*add user
+*add ip whitelist 0.0.0.0
+*click connect and get your connection string
+- create main folder called node passport log in and node init the folder
+- install dependencies 
+*bcrypt,passport local, ejs, express-ejs-layouts, mongoose, connect-flash, express-sessions, nodemon
+
+- create app.js file ; require all modules
+-create a folder called route with index.js and user.js
+index js takes routes like /login while users js takes /users/memebers
+ - at index, create routes and also link to app.js
+ -create views folder and require express-ejs-layouts
+ - in views folder, create ejs files ; dashboard,layout,login,register, welcome
+- work on layout file open bootswtch.com copy theme and also get font awesome and copy link
+copy booswatch theme and paste at under head tag and also paste font awesome link
+- copy code for js dismissable alert from   getbootstrap.com (dispmissable alert  (get on js since u already got css) )  and paste in body tag
+-copy home page boostrap template from views folder in repository and paste in welcome ejs
+- render register template from route.ejs
+- setup login ejs by pasting bootstrap
+
+  -visit app js and bring in mongoose and connect to db
+  -create config folder and file keys.js
+- paste cluster url in keys.js
+- connect to db
+- create user model 
+* create foler caller Model and file User js 
+* include mongoose and create schema 
+*create data type for name , email, password and date
+*create model ; with params modelname, userschema
+- since we are getting data from form, we need body parser.
+*add body parser in app.js
+-create post register handler for post request in user js ;;; users/register
+- handle validation first which are required fields, password match, password fields, password length
+*and if there's an error, welocme page is rendered back
+* the name, email, password list ensures data remains in field even if not correct
+-create partials folder in the views folder
+- in partials folder, create messages.ejs 
+- require bcryptjs and hash
+* generate salt with 10 Char using bcrypt.genSalt
+*create function and generate hash
+- set the hash password as the hashed password
+56:21
+MOVING TO LOGIN
+-create a passport.js file in config folder
+* require modules
+bcrypt.compare compares the hashed passwords
+-after checking if email and password available, we need to serialise and deserialise
+* copy and paste from passport documentation
+- create users/login route or login handle in users.js 
+-create dashboard in the index js 
+*add code in dashboard.js
+- create logout handle
+*just call req.logout();
+- fix url access to dashboard without login
+* creATE auth.js in config folder.
+*paste the code in any route u want to be protected.
+- ensure user name shows  in dash board
+* set name in req.user in index.js
+
+
+RESEARCH.
+=======
+
+work on dashboard
+configure email to be sent after registration
+
+
+
+
+
+
+
+
+
+
+==========================================

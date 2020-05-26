@@ -1,0 +1,166 @@
+<div class="row mt-5">
+  <div class="col-md-6 m-auto">
+    <div class="card card-body">
+      <h1 class="text-center mb-3">
+        <i class="fas fa-user-plus"></i> Register
+      </h1>
+      <% include ./partials/messages %>
+      <form action="/users/register" method="POST">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input
+            type="name"
+            id="name"
+            name="name"
+            class="form-control"
+            placeholder="Enter Name"
+            value="<%= typeof name != 'undefined' ? name : '' %>"
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="form-control"
+            placeholder="Enter Email"
+            value="<%= typeof email != 'undefined' ? email : '' %>"
+          />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            class="form-control"
+            placeholder="Create Password"
+            value="<%= typeof password != 'undefined' ? password : '' %>"
+          />
+        </div>
+        <div class="form-group">
+          <label for="password2">Confirm Password</label>
+          <input
+            type="password"
+            id="password2"
+            name="password2"
+            class="form-control"
+            placeholder="Confirm Password"
+            value="<%= typeof password2 != 'undefined' ? password2 : '' %>"
+          />
+        </div>
+		
+		<div class="form-group">
+          <label for="name">Specialty</label>
+          <input
+            type="name"
+            id="specialty"
+            name="specialty"
+            class="form-control"
+            placeholder="Enter Specialty"
+            value="<%= typeof name != 'undefined' ? specialty : '' %>"
+          />
+		     </div>
+		
+		<div class="form-group">
+          <label for="name">Level</label>
+          <input
+            type="number"
+            id="level"
+            name="level"
+            class="form-control"
+            placeholder="Enter Level"
+            value="<%= typeof name != 'undefined' ? level : '' %>"
+          />
+		   </div>
+		   
+		<div class="form-group">
+          <label for="name">Matricule</label>
+          <input
+            type="name"
+            id="matricule"
+            name="matricule"
+            class="form-control"
+            placeholder="Enter Matricule On School Badge"
+            value="<%= typeof name != 'undefined' ? matricule : '' %>"
+          />
+		   </div>
+		   
+		<div class="form-group">
+          <label for="name">Skills or Knowledge In ...</label>
+          <input
+            type="name"
+            id="skills"
+            name="skills"
+            class="form-control"
+            placeholder="Enter Your Skills In Computer Science and Technology"
+            value="<%= typeof name != 'undefined' ? skills : '' %>"
+          />
+		   </div>
+		   
+		   
+		   <div class="form-group">
+          <label for="name">Contact</label>
+          <input
+            type="name"
+            id="contact"
+            name="contact"
+			 maxlength="9"
+            class="form-control"
+            placeholder="Enter Contact"
+            value="<%= typeof name != 'undefined' ? contact: '' %>"
+          />
+		   </div>
+		   
+		<div class="form-group">
+          <label for="name">Address</label>
+          <input
+            type="name"
+            id="address"
+            name="address"
+            class="form-control"
+            placeholder="Enter Address"
+            value="<%= typeof name != 'undefined' ? address : '' %>"
+          />
+		   </div>
+		
+        <div class="form-group">
+          <select name="gender">
+    <option value="male">male</option>
+    <option value="female">female</option>
+  </select>
+
+
+        </div>
+        
+              <div class="form-group">
+          <select name="campus">
+    <option value="akwa">Campus Akwa</option>
+    <option value="Bonamoussadi">Campus Bonamoussadi</option>
+  </select>
+
+
+        </div>
+	
+	<div class="form-group">
+          <label for="name">Additional Info</label>
+          <input
+            type="name"
+            id="additional"
+            name="additional"
+            class="form-control"
+			size = "70"
+            placeholder="Enter More Info About Yourself"
+            value="<%= typeof name != 'undefined' ? additional : '' %>"
+          />
+</div>		
+	
+        <button type="submit"  class="btn btn-primary btn-block">
+          Register
+        </button>
+      </form>
+      <p class="lead mt-4">Have An Account? <a href="/users/login">Login</a></p>
+    </div>
+  </div>
+</div>
